@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+/*CSS reset*/
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+#nav li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+#nav li a{
+    color: #777;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#nav li a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#home {
+    background-color: #fff;
+}
+#home h1{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -54%);
+    color: #000;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: initial;
+}
+#home h2{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    color: #000;
+    text-decoration: none;
+    font-size: 25px;
+}
+#about{
+    background-color: #fff;
+}
+#about h1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: #000;
+    font-size: 40px;
+    font-weight: initial;
+}
+#about p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 30px;
+}
+#ourwork {
+    background-color: #fff;
+
+}
+
+#events {grid-area: production; height: 28vh;}
+#theater {grid-area: stage; height: 28vh;}
+#film {grid-area: lx; height: 28vh;}
+#pic1 {grid-area: pic1; height: 28vh;}
+#pic3 {grid-area: pic2; height: 28vh;}
+#pic5 {grid-area: pic3; height: 28vh;}
+#pic2 {grid-area: pdf1; height: 57vh;}
+#pic4 {grid-area: pdf2; height: 57vh;}
+#pic6 {grid-area: pdf3; height: 57vh;}
+
+#Eevents {grid-area: production; height: 28vh;}
+#Etheater {grid-area: stage; height: 28vh;}
+#Efilm {grid-area: lx; height: 28vh;}
+#Epic1 {grid-area: pic1; height: 28vh;}
+#Epic3 {grid-area: pic2; height: 28vh;}
+#Epic5 {grid-area: pic3; height: 28vh;}
+#Epic2 {grid-area: pdf1; height: 57vh;}
+#Epic4 {grid-area: pdf2; height: 57vh;}
+#Epic6 {grid-area: pdf3; height: 57vh;}
+
+#Tevents {grid-area: production; height: 28vh;}
+#Ttheater {grid-area: stage; height: 28vh;}
+#Tfilm {grid-area: lx; height: 28vh;}
+#Tpic1 {grid-area: pic1; height: 28vh;}
+#Tpic3 {grid-area: pic2; height: 28vh;}
+#Tpic5 {grid-area: pic3; height: 28vh;}
+#Tpic2 {grid-area: pdf1; height: 57vh;}
+#Tpic4 {grid-area: pdf2; height: 57vh;}
+#Tpic6 {grid-area: pdf3; height: 57vh;}
+
+#Fevents {grid-area: production; height: 28vh;}
+#Ftheater {grid-area: stage; height: 28vh;}
+#Ffilm {grid-area: lx; height: 28vh;}
+#Fpic1 {grid-area: pic1; height: 28vh;}
+#Fpic3 {grid-area: pic2; height: 28vh;}
+#Fpic5 {grid-area: pic3; height: 28vh;}
+#Fpic2 {grid-area: pdf1; height: 57vh;}
+#Fpic4 {grid-area: pdf2; height: 57vh;}
+#Fpic6 {grid-area: pdf3; height: 57vh;}
+
+
+
+#grid {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    'production pic1 pdf1 pic2'
+    'stage pdf2 pdf1 pdf3'
+    'lx pdf2 pic3 pdf3';
+}
+
+#grid div{
+    width: 22vw;
+}
+
+.container {
+    position: relative;
+    width: 22vw;
+    background-color: #fff;
+
+}
+
+.Limage {
+    opacity: 0.2;
+    display: block;
+    width: 22vw;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    height: inherit;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 22vw;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    height: inherit;
+}
+
+.top {
+    width: 22vw;
+    transition: .5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+}
+
+.middle {
+    width: 22vw;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+}
+
+.container:hover .Limage {
+    opacity: 0.5;
+}
+
+.container:hover .image {
+    opacity: 0.2;
+}
+
+.container:hover .top {
+    text-decoration: underline;
+}
+.container:hover .middle {
+    opacity: 1;
+}
+
+#fkEvent {display: none;}
+#fkEvents div {display: none;}
+#fkEvents div img{display: none;}
+#fkEvents div div{display: none;}
+#fkTheater{display: none}
+#fkTheater div{display: none}
+#fkTheater div img{display: none}
+#fkTheater div div{display: none}
+#fkFilm{display: none}
+#fkFilm div{display: none}
+#fkFilm div img{display: none}
+#fkFilm div div{display: none}
+
+
+#resume{
+    background-color: #fff;
+}
+#resume p{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-15%, -50%);
+    color: #000;
+    font-size: 30px;
+}
+.pdf{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-35%, -50%);
+    width: 35vw;
+    height: 80vh;
+
+}
+.pdf embed{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-35%, -50%);
+}
+#resume a{
+    text-decoration: none;
+    color: #777;
+}
+#resume a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+#contact{
+    background-color: #fff;
+}
+#contact h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    color: #000;
+    font-size: 40px;
+    font-weight: initial;
+}
+#contact p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 30px;
+}
+#contact a{
+    text-decoration: none;
+    color: #777;
+}
+#contact a:hover{
+    text-decoration: underline;
+    color: #000;
+}
